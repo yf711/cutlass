@@ -114,6 +114,7 @@ CUTE_DEVICE dim3 cluster_id_in_grid()
   return blockIdx;
 #elif defined(_MSC_VER)
   CUTE_RUNTIME_ASSERT("cluster_id_in_grid() can only be called on device");
+  return { 0, 0, 0 };
 #else
   return {0, 0, 0};
 #endif
